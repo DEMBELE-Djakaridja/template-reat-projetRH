@@ -1,0 +1,11 @@
+{
+  "title": "Gestion RH",
+  "description": "Manage and validate employee leave and permissions with hierarchical workflows, digital administrative acts, and interactive planning for public sector HR.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

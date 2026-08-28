@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-ci-orange: #E8751A;
+  --color-ci-orange-light: #FFF4EB;
+  --color-ci-orange-dark: #C45E0D;
+  --color-ci-green: #009A4E;
+  --color-ci-green-light: #E6F7EE;
+  --color-ci-green-dark: #007A3D;
+  --color-surface: #F4F6F9;
+  --color-surface-2: #EAECF0;
+  --color-card: #FFFFFF;
+  --color-border: #E2E6EA;
+  --color-text-primary: #1A202C;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+  --color-danger: #DC2626;
+  --color-danger-light: #FEF2F2;
+  --color-warning: #D97706;
+  --color-warning-light: #FFFBEB;
+  --color-info: #2563EB;
+  --color-info-light: #EFF6FF;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* Sidebar transition */
+.sidebar-link {
+  transition: all 0.15s ease;
+}
+.sidebar-link:hover {
+  background-color: #FFF4EB;
+  color: #E8751A;
+}
+.sidebar-link.active {
+  background-color: #FFF4EB;
+  color: #E8751A;
+  border-right: 3px solid #E8751A;
+}
+.sidebar-link.active svg {
+  color: #E8751A;
+}
+
+/* Card hover */
+.stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+/* Badge animations */
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Table row hover */
+.table-row:hover {
+  background-color: #F8FAFC;
+}
+
+/* Input focus */
+.form-input:focus {
+  outline: none;
+  border-color: #E8751A;
+  box-shadow: 0 0 0 3px rgba(232, 117, 26, 0.15);
+}
+
+/* Calendar */
+.cal-day:hover {
+  background-color: #FFF4EB;
+  cursor: pointer;
+}
+.cal-day.has-event {
+  position: relative;
+}
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+}
